@@ -105,4 +105,36 @@ function readSamplesJSON() {
     // createGaugeChart(selectedSubjectId, data);
     // updateDemographicInfo(selectedSubjectId, data);
   }
+
+  // Function to display the sample metadata
+function displayMetadata(selectedSubjectId, data) {
+    // Get the metadata for the selected subject ID
+    const selectedMetadata = data.metadata.find(metadata => metadata.id === parseInt(selectedSubjectId));
+  
+    // Select the sample-metadata div to display the demographic information
+    const metadataDiv = d3.select("#sample-metadata");
+  
+    // Clear any existing content in the metadata div
+    metadataDiv.html("");
+  
+    // Loop through the key-value pairs in the metadata and display them
+    Object.entries(selectedMetadata).forEach(([key, value]) => {
+      metadataDiv.append("p").text(`${key}: ${value}`);
+    });
+  }
+  
+  // Function to handle changes in the dropdown menu
+function optionChanged(selectedSubjectId, data) {
+    // Call the function to create the bar chart with the selected subject ID
+    createBarChart(selectedSubjectId, data);
+  
+    // Call the function to create the bubble chart with the selected subject ID
+    createBubbleChart(selectedSubjectId, data);
+  
+    // Call the function to display the sample metadata with the selected subject ID
+    displayMetadata(selectedSubjectId, data);
+  
+    // You can also implement functions to update other visualizations here
+    // createGaugeChart(selectedSubjectId, data);
+  }
   
