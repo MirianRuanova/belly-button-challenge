@@ -1,5 +1,8 @@
 # belly-button-challenge
 
+[Belly Button Biodiversity Dashboard](https://mirianruanova.github.io/belly-button-challenge/)
+
+
 **Belly Button Biodiversity Dashboard**
 
 The Belly Button Biodiversity Dashboard is an interactive web application that allows users to explore and visualize the biodiversity of belly button microbes for different test subjects. The data used in the dashboard is provided in a JSON format and reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
